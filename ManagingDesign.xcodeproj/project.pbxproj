@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA41384A1FD10FB00039FF86 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4138491FD10FB00039FF86 /* Design.swift */; };
 		AA80ACD61FCCAB56000FB772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */; };
 		AA80ACD81FCCAB56000FB772 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */; };
 		AA80ACDA1FCCAB56000FB772 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD91FCCAB56000FB772 /* DetailViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA4138491FD10FB00039FF86 /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		AA80ACD21FCCAB56000FB772 /* ManagingDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagingDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */,
 				AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */,
 				AA80ACD91FCCAB56000FB772 /* DetailViewController.swift */,
+				AA4138491FD10FB00039FF86 /* Design.swift */,
 				AA80ACDB1FCCAB56000FB772 /* Main.storyboard */,
 				AA80ACDE1FCCAB56000FB772 /* Assets.xcassets */,
 				AA80ACE01FCCAB56000FB772 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA80ACDA1FCCAB56000FB772 /* DetailViewController.swift in Sources */,
+				AA41384A1FD10FB00039FF86 /* Design.swift in Sources */,
 				AA80ACD81FCCAB56000FB772 /* MasterViewController.swift in Sources */,
 				AA80ACD61FCCAB56000FB772 /* AppDelegate.swift in Sources */,
 			);

@@ -25,6 +25,8 @@ class DetailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configureView()
+		detailDescriptionLabel.font = Design.AppViews.headerFont
+		view.backgroundColor = Design.AppViews.backgroundColor
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -33,28 +35,17 @@ class DetailViewController: UIViewController {
 
 	func numberSymbol(numberString:String) -> String {
 		switch numberString {
-		case "Unus":
-			return "I"
-		case "Duo":
-			return "II"
-		case "Tres":
-			return "III"
-		case "Quattuor":
-			return "IV"
-		case "Quinque":
-			return "V"
-		case "Sex":
-			return "VI"
-		case "Septem":
-			return "VII"
-		case "Octo":
-			return "VIII"
-		case "Novem":
-			return "IX"
-		case "Decem":
-			return "X"
-		default:
-			return "?"
+		case "Unus": 	return "I"
+		case "Duo": 	return "II"
+		case "Tres": 	return "III"
+		case "Quattuor":return "IV"
+		case "Quinque": return "V"
+		case "Sex": 	return "VI"
+		case "Septem": 	return "VII"
+		case "Octo": 	return "VIII"
+		case "Novem": 	return "IX"
+		case "Decem": 	return "X"
+		default: 		return "?"
 		}
 
 	}

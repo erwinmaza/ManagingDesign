@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		AA41384A1FD10FB00039FF86 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4138491FD10FB00039FF86 /* Design.swift */; };
+		AA63C7071FD50DBB00043793 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C6FC1FD50DBB00043793 /* Lato-Black.ttf */; };
+		AA63C7081FD50DBB00043793 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C6FD1FD50DBB00043793 /* Lato-BlackItalic.ttf */; };
+		AA63C7091FD50DBB00043793 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C6FE1FD50DBB00043793 /* Lato-Bold.ttf */; };
+		AA63C70A1FD50DBB00043793 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C6FF1FD50DBB00043793 /* Lato-BoldItalic.ttf */; };
+		AA63C70B1FD50DBB00043793 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7001FD50DBB00043793 /* Lato-Hairline.ttf */; };
+		AA63C70C1FD50DBB00043793 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7011FD50DBB00043793 /* Lato-HairlineItalic.ttf */; };
+		AA63C70D1FD50DBB00043793 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7021FD50DBB00043793 /* Lato-Italic.ttf */; };
+		AA63C70E1FD50DBB00043793 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7031FD50DBB00043793 /* Lato-Light.ttf */; };
+		AA63C70F1FD50DBB00043793 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7041FD50DBB00043793 /* Lato-LightItalic.ttf */; };
+		AA63C7101FD50DBB00043793 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7051FD50DBB00043793 /* Lato-Regular.ttf */; };
+		AA63C7111FD50DBB00043793 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7061FD50DBB00043793 /* OFL.txt */; };
 		AA80ACD61FCCAB56000FB772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */; };
 		AA80ACD81FCCAB56000FB772 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */; };
 		AA80ACDA1FCCAB56000FB772 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD91FCCAB56000FB772 /* DetailViewController.swift */; };
@@ -18,6 +29,17 @@
 
 /* Begin PBXFileReference section */
 		AA4138491FD10FB00039FF86 /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		AA63C6FC1FD50DBB00043793 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		AA63C6FD1FD50DBB00043793 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AA63C6FE1FD50DBB00043793 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		AA63C6FF1FD50DBB00043793 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AA63C7001FD50DBB00043793 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		AA63C7011FD50DBB00043793 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AA63C7021FD50DBB00043793 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		AA63C7031FD50DBB00043793 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		AA63C7041FD50DBB00043793 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		AA63C7051FD50DBB00043793 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		AA63C7061FD50DBB00043793 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		AA80ACD21FCCAB56000FB772 /* ManagingDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagingDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +61,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA63C6FA1FD50DBB00043793 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AA63C6FB1FD50DBB00043793 /* Lato */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AA63C6FB1FD50DBB00043793 /* Lato */ = {
+			isa = PBXGroup;
+			children = (
+				AA63C6FC1FD50DBB00043793 /* Lato-Black.ttf */,
+				AA63C6FD1FD50DBB00043793 /* Lato-BlackItalic.ttf */,
+				AA63C6FE1FD50DBB00043793 /* Lato-Bold.ttf */,
+				AA63C6FF1FD50DBB00043793 /* Lato-BoldItalic.ttf */,
+				AA63C7001FD50DBB00043793 /* Lato-Hairline.ttf */,
+				AA63C7011FD50DBB00043793 /* Lato-HairlineItalic.ttf */,
+				AA63C7021FD50DBB00043793 /* Lato-Italic.ttf */,
+				AA63C7031FD50DBB00043793 /* Lato-Light.ttf */,
+				AA63C7041FD50DBB00043793 /* Lato-LightItalic.ttf */,
+				AA63C7051FD50DBB00043793 /* Lato-Regular.ttf */,
+				AA63C7061FD50DBB00043793 /* OFL.txt */,
+			);
+			path = Lato;
+			sourceTree = "<group>";
+		};
 		AA80ACC91FCCAB56000FB772 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +113,7 @@
 				AA80ACDB1FCCAB56000FB772 /* Main.storyboard */,
 				AA80ACDE1FCCAB56000FB772 /* Assets.xcassets */,
 				AA80ACE01FCCAB56000FB772 /* LaunchScreen.storyboard */,
+				AA63C6FA1FD50DBB00043793 /* Fonts */,
 				AA80ACE31FCCAB56000FB772 /* Info.plist */,
 			);
 			path = ManagingDesign;
@@ -129,8 +178,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA63C7111FD50DBB00043793 /* OFL.txt in Resources */,
+				AA63C70D1FD50DBB00043793 /* Lato-Italic.ttf in Resources */,
+				AA63C7071FD50DBB00043793 /* Lato-Black.ttf in Resources */,
+				AA63C7091FD50DBB00043793 /* Lato-Bold.ttf in Resources */,
+				AA63C70E1FD50DBB00043793 /* Lato-Light.ttf in Resources */,
 				AA80ACE21FCCAB56000FB772 /* LaunchScreen.storyboard in Resources */,
+				AA63C7081FD50DBB00043793 /* Lato-BlackItalic.ttf in Resources */,
 				AA80ACDF1FCCAB56000FB772 /* Assets.xcassets in Resources */,
+				AA63C70F1FD50DBB00043793 /* Lato-LightItalic.ttf in Resources */,
+				AA63C70C1FD50DBB00043793 /* Lato-HairlineItalic.ttf in Resources */,
+				AA63C70A1FD50DBB00043793 /* Lato-BoldItalic.ttf in Resources */,
+				AA63C7101FD50DBB00043793 /* Lato-Regular.ttf in Resources */,
+				AA63C70B1FD50DBB00043793 /* Lato-Hairline.ttf in Resources */,
 				AA80ACDD1FCCAB56000FB772 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,8 +343,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3R85C7F8XA;
+				DEVELOPMENT_TEAM = 3J4WM73YC7;
 				INFOPLIST_FILE = ManagingDesign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = emazamobile.ManagingDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,8 +359,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3R85C7F8XA;
+				DEVELOPMENT_TEAM = 3J4WM73YC7;
 				INFOPLIST_FILE = ManagingDesign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = emazamobile.ManagingDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";

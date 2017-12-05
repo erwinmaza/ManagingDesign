@@ -54,7 +54,7 @@ struct Design {
 			fatalError("Specified default font is not implemented. Weight: \(weight), size: \(size)")
 		}
 
-		setDefaultFont(label: label, font: fontEnum.uiFont(theme: nil))
+		setDefaultFont(label: label, font: fontEnum.uiFont())
 	}
 
 	static func setDefaultFont(label: UILabel, font: UIFont) {

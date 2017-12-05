@@ -17,7 +17,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		navigationItem.leftBarButtonItem = editButtonItem
+		navigationItem.leftBarButtonItem = editButtonItem // used for theme switching
 
 		setUI()
 
@@ -42,6 +42,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		super.didReceiveMemoryWarning()
 	}
 
+	// highjack this to enable easy theme switching
 	override func setEditing(_ editing: Bool, animated: Bool) {
 		super.setEditing(editing, animated: animated)
 		switch editing {

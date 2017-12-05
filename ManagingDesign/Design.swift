@@ -8,7 +8,7 @@ import UIKit
 struct Design {
 	
 	struct AppViews {
-		static let backgroundColor = Colors.background.uiColor()
+		static let backgroundColor = Colors.background.uiColor(.light)
 
 		static let navigationTint = Colors.accent.uiColor()
 		static let navigationBackgroundImage = BackgroundImages.header.uiImage()
@@ -52,7 +52,7 @@ struct Design {
 			fatalError("Specified default font is not implemented. Weight: \(weight), size: \(size)")
 		}
 
-		setDefaultFont(label: label, font: fontEnum.uiFont())
+		setDefaultFont(label: label, font: fontEnum.uiFont(theme: nil))
 	}
 
 	static func setDefaultFont(label: UILabel, font: UIFont) {

@@ -6,11 +6,15 @@ import UIKit
 
 extension Design {
 
+	enum Themes: String {
+		case light, dark
+	}
+
 	enum Colors: String {
 		case accent, text, lightText, clear, white, lightObscuring, error, background, headerBackground
 
-		func uiColor() -> UIColor {
-			guard let color = DesignConfig().colors[self.rawValue] else {
+		func uiColor(_ theme: Themes? = nil) -> UIColor {
+			guard let color = DesignConfig(theme).colors[self.rawValue] else {
 				fatalError("Specified color not in config: \(self.rawValue)")
 			}
 			return color
@@ -20,8 +24,8 @@ extension Design {
 	enum BackgroundImages: String {
 		case view, header
 
-		func uiImage() -> UIImage {
-			guard let image = DesignConfig().backgroundImages[self.rawValue] else {
+		func uiImage(theme: Themes? = nil) -> UIImage {
+			guard let image = DesignConfig(theme).backgroundImages[self.rawValue] else {
 				fatalError("Specified image not in config: \(self.rawValue)")
 			}
 			return image
@@ -35,8 +39,8 @@ extension Design {
 		bold_17,
 		regular_16, regular_13
 
-		func uiFont() -> UIFont {
-			guard let font = DesignConfig().fonts[self.rawValue] else {
+		func uiFont(theme: Themes? = nil) -> UIFont {
+			guard let font = DesignConfig(theme).fonts[self.rawValue] else {
 				fatalError("Specified font not in config: \(self.rawValue)")
 			}
 			return font
@@ -80,10 +84,23 @@ extension Design {
 			fonts["regular_13"] = 	UIFont(name: "Lato-Regular", size: 13.0) ?? substituteFont
 		}
 
-	}
+		init(_ theme: Themes?) {
 
-	private func loadConfig() {
+			if let theme = theme {
+				let file = "\(theme.rawValue)theme.json"
+				print(file)	// silences unused variable warning
 
+				// TODO: read and parse json file, create DesignConfig object based on values
+				// color: rgba values
+				// images: image names as string
+				// fonts: font-name, size
+				self.init()
+
+			} else {
+				self.init()
+			}
+
+		}
 
 	}
 

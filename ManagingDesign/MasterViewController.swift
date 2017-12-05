@@ -17,14 +17,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		view.backgroundColor = Design.AppViews.backgroundColor
-
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-		tableView.backgroundColor = Design.AppTables.backgroundColor
-		tableView.separatorColor = Design.AppTables.separatorColor
-
-		navigationController?.navigationBar.setBackgroundImage(Design.AppViews.navigationBackgroundImage, for: .default)
-		navigationController?.navigationBar.tintColor = Design.AppViews.navigationTint
 
 		self.title = "Pick a number"
 		if let split = splitViewController {
@@ -77,21 +70,17 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 		let label = UILabel(frame: CGRect(x: leftPadding, y: 0, width: tableView.frame.size.width - leftPadding, height: 32))
 		label.text = "Latin Numbers"
-		Design.setDefaultFont(label: label, weight: .bold, size: 17)
 
 		let view = UIView()
-		view.backgroundColor = Design.AppTables.TableHeader.backgroundColor
 		view.addSubview(label)
 		return view
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-		cell.backgroundColor = Design.AppTables.TableCell.backgroundColor
 
 		if let label = cell.textLabel {
 			label.text = latinNumbers[indexPath.row]
-			Design.setDefaultFont(label: label, font: Design.AppTables.TableCell.titleLabelFont)
 		}
 		return cell
 	}

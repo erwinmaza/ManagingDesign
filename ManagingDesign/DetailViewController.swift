@@ -17,14 +17,12 @@ class DetailViewController: UIViewController {
 	func configureView() {
 		if let detail = detailItem, let label = detailDescriptionLabel {
 	        label.text = numberSymbol(numberString: detail)
-			Design.setDefaultFont(label: detailDescriptionLabel, weight: .light)
 		}
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configureView()
-		view.backgroundColor = Design.AppViews.backgroundColor
 	}
 
 	override func didReceiveMemoryWarning() {

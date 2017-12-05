@@ -19,6 +19,7 @@
 		AA63C70F1FD50DBB00043793 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7041FD50DBB00043793 /* Lato-LightItalic.ttf */; };
 		AA63C7101FD50DBB00043793 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7051FD50DBB00043793 /* Lato-Regular.ttf */; };
 		AA63C7111FD50DBB00043793 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA63C7061FD50DBB00043793 /* OFL.txt */; };
+		AA63C7131FD662AD00043793 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63C7121FD662AD00043793 /* DesignConstants.swift */; };
 		AA80ACD61FCCAB56000FB772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */; };
 		AA80ACD81FCCAB56000FB772 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */; };
 		AA80ACDA1FCCAB56000FB772 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80ACD91FCCAB56000FB772 /* DetailViewController.swift */; };
@@ -40,6 +41,7 @@
 		AA63C7041FD50DBB00043793 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		AA63C7051FD50DBB00043793 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		AA63C7061FD50DBB00043793 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		AA63C7121FD662AD00043793 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
 		AA80ACD21FCCAB56000FB772 /* ManagingDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagingDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -109,12 +111,13 @@
 				AA80ACD51FCCAB56000FB772 /* AppDelegate.swift */,
 				AA80ACD71FCCAB56000FB772 /* MasterViewController.swift */,
 				AA80ACD91FCCAB56000FB772 /* DetailViewController.swift */,
-				AA4138491FD10FB00039FF86 /* Design.swift */,
 				AA80ACDB1FCCAB56000FB772 /* Main.storyboard */,
 				AA80ACDE1FCCAB56000FB772 /* Assets.xcassets */,
 				AA80ACE01FCCAB56000FB772 /* LaunchScreen.storyboard */,
 				AA63C6FA1FD50DBB00043793 /* Fonts */,
 				AA80ACE31FCCAB56000FB772 /* Info.plist */,
+				AA4138491FD10FB00039FF86 /* Design.swift */,
+				AA63C7121FD662AD00043793 /* DesignConstants.swift */,
 			);
 			path = ManagingDesign;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				AA80ACDA1FCCAB56000FB772 /* DetailViewController.swift in Sources */,
 				AA41384A1FD10FB00039FF86 /* Design.swift in Sources */,
 				AA80ACD81FCCAB56000FB772 /* MasterViewController.swift in Sources */,
+				AA63C7131FD662AD00043793 /* DesignConstants.swift in Sources */,
 				AA80ACD61FCCAB56000FB772 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configureView()
-		view.backgroundColor = Design.AppViews.backgroundColor
+		view.backgroundColor = Design.AppViews.backgroundColor()
 	}
 
 	override func didReceiveMemoryWarning() {

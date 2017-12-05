@@ -13,7 +13,7 @@ extension Design {
 	enum Colors: String {
 		case accent, text, lightText, clear, white, lightObscuring, error, background, headerBackground
 
-		func uiColor(_ theme: Themes? = nil) -> UIColor {
+		func uiColor(_ theme: Themes? = Design.currentTheme) -> UIColor {
 			guard let color = DesignConfig(theme).colors[self.rawValue] else {
 				fatalError("Specified color not in config: \(self.rawValue)")
 			}
@@ -24,7 +24,7 @@ extension Design {
 	enum BackgroundImages: String {
 		case view, header
 
-		func uiImage(theme: Themes? = nil) -> UIImage {
+		func uiImage(theme: Themes? = Design.currentTheme) -> UIImage {
 			guard let image = DesignConfig(theme).backgroundImages[self.rawValue] else {
 				fatalError("Specified image not in config: \(self.rawValue)")
 			}
@@ -39,7 +39,7 @@ extension Design {
 		bold_17,
 		regular_16, regular_13
 
-		func uiFont(theme: Themes? = nil) -> UIFont {
+		func uiFont(theme: Themes? = Design.currentTheme) -> UIFont {
 			guard let font = DesignConfig(theme).fonts[self.rawValue] else {
 				fatalError("Specified font not in config: \(self.rawValue)")
 			}
@@ -86,20 +86,28 @@ extension Design {
 
 		init(_ theme: Themes?) {
 
-			if let theme = theme {
-				let file = "\(theme.rawValue)theme.json"
-				print(file)	// silences unused variable warning
+			self.init()
 
-				// TODO: read and parse json file, create DesignConfig object based on values
-				// color: rgba values
-				// images: image names as string
-				// fonts: font-name, size
-				self.init()
-
-			} else {
-				self.init()
+			switch theme {
+			case .none:
+				break
+			case .some(let value):
+				switch value {
+				case .dark:
+					colors["text"] = 		UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+					colors["background"] = 	UIColor(red:   5/255, green:   5/255, blue:  55/255, alpha: 1)
+				case .light:
+					colors["text"] = 		UIColor(red:   5/255, green:   5/255, blue:  55/255, alpha: 1)
+					colors["background"] = 	UIColor(red: 255/255, green: 150/255, blue: 150/255, alpha: 1)
+				}
 			}
+		}
 
+		init(_ jsonFile: String) {
+			// TODO: read and parse json file, create DesignConfig object based on values
+			// color: rgba values, or "pattern" and alpha value
+			// images: image names as string
+			// fonts: font-name, size
 		}
 
 	}

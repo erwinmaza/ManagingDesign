@@ -17,14 +17,11 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		view.backgroundColor = Design.AppViews.backgroundColor
+		navigationItem.leftBarButtonItem = editButtonItem
+
+		setUI()
 
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-		tableView.backgroundColor = Design.AppTables.backgroundColor
-		tableView.separatorColor = Design.AppTables.separatorColor
-
-		navigationController?.navigationBar.setBackgroundImage(Design.AppViews.navigationBackgroundImage, for: .default)
-		navigationController?.navigationBar.tintColor = Design.AppViews.navigationTint
 
 		self.title = "Pick a number"
 		if let split = splitViewController {
@@ -43,6 +40,26 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
+	}
+
+	override func setEditing(_ editing: Bool, animated: Bool) {
+		super.setEditing(editing, animated: animated)
+		switch editing {
+		case true:
+			Design.currentTheme = .light
+		case false:
+			Design.currentTheme = .dark
+		}
+		setUI()
+		tableView.reloadData()
+	}
+
+	func setUI() {
+		view.backgroundColor = Design.AppViews.backgroundColor()
+		tableView.backgroundColor = Design.AppTables.backgroundColor()
+		tableView.separatorColor = Design.AppTables.separatorColor()
+		navigationController?.navigationBar.setBackgroundImage(Design.AppViews.navigationBackgroundImage(), for: .default)
+		navigationController?.navigationBar.tintColor = Design.AppViews.navigationTint()
 	}
 
 	// MARK: - Segues
@@ -80,18 +97,18 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		Design.setDefaultFont(label: label, weight: .bold, size: 17)
 
 		let view = UIView()
-		view.backgroundColor = Design.AppTables.TableHeader.backgroundColor
+		view.backgroundColor = Design.AppTables.TableHeader.backgroundColor()
 		view.addSubview(label)
 		return view
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-		cell.backgroundColor = Design.AppTables.TableCell.backgroundColor
+		cell.backgroundColor = Design.AppTables.TableCell.backgroundColor()
 
 		if let label = cell.textLabel {
 			label.text = latinNumbers[indexPath.row]
-			Design.setDefaultFont(label: label, font: Design.AppTables.TableCell.titleLabelFont)
+			Design.setDefaultFont(label: label, font: Design.AppTables.TableCell.titleLabelFont())
 		}
 		return cell
 	}

@@ -6,28 +6,30 @@ import Foundation
 import UIKit
 
 struct Design {
-	
-	struct AppViews {
-		static let backgroundColor = Colors.background.uiColor(.light)
 
-		static let navigationTint = Colors.accent.uiColor()
-		static let navigationBackgroundImage = BackgroundImages.header.uiImage()
+	static var currentTheme: Themes? = nil
+
+	struct AppViews {
+		static func backgroundColor() -> UIColor { return Colors.background.uiColor() }
+
+		static func navigationTint() -> UIColor { return Colors.accent.uiColor() }
+		static func navigationBackgroundImage() -> UIImage { return BackgroundImages.header.uiImage() }
 	}
 	
 	struct AppTables {
-		static let backgroundColor = Colors.background.uiColor()
-		static let separatorColor = Colors.accent.uiColor()
+		static func backgroundColor() -> UIColor { return Colors.background.uiColor() }
+		static func separatorColor() -> UIColor { return Colors.accent.uiColor() }
 
 		struct TableHeader {
-			static let backgroundColor = Colors.headerBackground.uiColor()
+			static func backgroundColor() -> UIColor { return Colors.headerBackground.uiColor() }
 		}
 
 		struct TableCell {
-			static let titleLabelColor = Colors.text.uiColor()
-			static let titleLabelFont = Fonts.lightItalic_18.uiFont()
+			static func titleLabelColor() -> UIColor { return Colors.text.uiColor() }
+			static func titleLabelFont() -> UIFont { return Fonts.lightItalic_18.uiFont() }
 
 			static let labelPadding: CGFloat = 5
-			static let backgroundColor = Colors.clear.uiColor()
+				static func backgroundColor() -> UIColor { return Colors.clear.uiColor() }
 		}
 	}
 	

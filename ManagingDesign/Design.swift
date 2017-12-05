@@ -9,17 +9,9 @@ struct Design {
 	
 	struct AppViews {
 		static let backgroundColor = Colors.background.uiColor()
-		static let backgroundImage = BackgroundImages.header.uiImage()
 
-		static let headerFont = Fonts.light_48.uiFont()
-		static let labelFont = Fonts.regular_13.uiFont()
-		static let statsBoldFont = Fonts.bold_17.uiFont()
-
-		static let textColor = Colors.text.uiColor()
-		static let textLightColor = Colors.lightText.uiColor()
 		static let navigationTint = Colors.accent.uiColor()
-
-		static let pagePathSeparator = Separators.hand.symbol()
+		static let navigationBackgroundImage = BackgroundImages.header.uiImage()
 	}
 	
 	struct AppTables {
@@ -39,20 +31,8 @@ struct Design {
 		}
 	}
 	
-	struct LoadingView {
-		static let backgroundColor = Colors.lightObscuring.uiColor()
-		static let image = BackgroundImages.loading.uiImage()
-		static let imageSize: CGFloat = 40
-		static let imageAlpha: CGFloat = 0.5
-	}
-	
-	struct ErrorView {
-		static let textColor = Colors.error.uiColor()
-	}
-	
 	struct DateTimeFormats {
 		static let dateTime = "MMM dd, yyyy hh:mm a"
-		static let timeZone = "z"
 	}
 	
 	enum FontWeights: String {
@@ -103,7 +83,7 @@ struct Design {
 		func uiColor() -> UIColor {
 			switch self {
 			case .accent:		return UIColor(red:   0/255, green: 181/255, blue: 255/255, alpha: 1)
-			case .text:			return UIColor(red:   0/255, green:   0/255, blue:   0/255, alpha: 1)
+			case .text:			return UIColor(red:   0/255, green:   0/255, blue: 100/255, alpha: 1)
 			case .lightText:	return UIColor(red: 193/255, green: 193/255, blue: 255/255, alpha: 0.75)
 			case .clear:		return UIColor.clear
 			case .white:		return UIColor.white
@@ -116,13 +96,12 @@ struct Design {
 	}
 	
 	private enum BackgroundImages {
-		case view, header, loading
+		case view, header
 		
 		func uiImage() -> UIImage {
 			switch self {
 			case .view:		if let image = UIImage(named: "background")	{ return image }
 			case .header:	if let image = UIImage(named: "header")		{ return image }
-			case .loading:	if let image = UIImage(named: "header")		{ return image }
 			}
 			return UIImage()
 		}
@@ -154,23 +133,5 @@ struct Design {
 			return .systemFont(ofSize: 14)
 		}
 	}
-
-	private enum Separators {
-		case hand, clap, oogle, wavy, musical, arrow
-
-		func symbol() -> String {
-			switch self {
-			case .hand: 	return " 👉🏼 "
-			case .clap: 	return " 👏🏼 "
-			case .oogle: 	return " 👀 "
-			case .wavy: 	return " 〰️ "
-			case .musical: 	return " 🎶 "
-			case .arrow: 	return " ➤ "
-			}
-
-		}
-
-	}
-	
 }
 

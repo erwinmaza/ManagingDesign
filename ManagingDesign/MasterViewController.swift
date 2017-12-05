@@ -4,29 +4,40 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+	@IBOutlet weak var tableView: UITableView!
+
+	let cellIdentifier = "Cell"
+	let segueIdentifier = "showDetail"
 
 	var detailViewController: DetailViewController? = nil
 	var latinNumbers = ["Unus", "Duo", "Tres", "Quattuor", "Quinque", "Sex", "Septem", "Octo", "Novem", "Decem"]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.leftBarButtonItem = editButtonItem
-		navigationController?.navigationBar.setBackgroundImage(Design.AppViews.backgroundImage, for: .default)
-		navigationController?.navigationBar.tintColor = Design.AppViews.navigationTint
 
+		view.backgroundColor = Design.AppViews.backgroundColor
+
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
 		tableView.backgroundColor = Design.AppTables.backgroundColor
 		tableView.separatorColor = Design.AppTables.separatorColor
+
+		navigationController?.navigationBar.setBackgroundImage(Design.AppViews.navigationBackgroundImage, for: .default)
+		navigationController?.navigationBar.tintColor = Design.AppViews.navigationTint
 
 		self.title = "Pick a number"
 		if let split = splitViewController {
 		    let controllers = split.viewControllers
 		    detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
 		}
+
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
-		clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+		if let selectedIndex = tableView.indexPathForSelectedRow {
+			tableView.deselectRow(at: selectedIndex, animated: false)
+		}
 		super.viewWillAppear(animated)
 	}
 
@@ -36,7 +47,7 @@ class MasterViewController: UITableViewController {
 
 	// MARK: - Segues
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "showDetail" {
+		if segue.identifier == segueIdentifier {
 		    if let indexPath = tableView.indexPathForSelectedRow {
 		        let object = latinNumbers[indexPath.row]
 		        let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
@@ -48,19 +59,19 @@ class MasterViewController: UITableViewController {
 	}
 
 	// MARK: - Table View
-	override func numberOfSections(in tableView: UITableView) -> Int {
+	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return latinNumbers.count
 	}
 
-	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		return 32
 	}
 
-	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
 		let leftPadding = tableView.separatorInset.left
 
@@ -74,8 +85,8 @@ class MasterViewController: UITableViewController {
 		return view
 	}
 
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
 		cell.backgroundColor = Design.AppTables.TableCell.backgroundColor
 
 		if let label = cell.textLabel {
@@ -85,16 +96,8 @@ class MasterViewController: UITableViewController {
 		return cell
 	}
 
-	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-		return true
-	}
-
-	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-		if editingStyle == .delete {
-		    latinNumbers.remove(at: indexPath.row)
-		    tableView.deleteRows(at: [indexPath], with: .fade)
-		} else if editingStyle == .insert {
-		}
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		performSegue(withIdentifier: segueIdentifier, sender: self)
 	}
 
 }
